@@ -1,0 +1,21 @@
+nav {
+  height: 120px;
+  background: #4056a1;
+  padding: 1.5em;
+  color: #fff;
+  z-index: 999;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  position: sticky;
+  top: 0em;
+}
+
+nav span {
+  font-family: "Bungee";
+}
+
+.justify-end {
+  justify-self: end;
+}

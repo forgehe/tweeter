@@ -9,6 +9,11 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,600,600i&display=swap" rel="stylesheet" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,10 +25,39 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <div>
+        <span>tweeter</span>
+      </div>
+      <div class="justify-end">
+        Write a new Tweet
+      </div>
     </nav>
+    <header>
+      <div class="profile-pic">
+        <img src="/images/profile-hex.png" />
+      </div>
+      <br />
+      <div>
+        <h2>Your Name</h2>
+      </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet" />
+          <span class="counter">140</span>
+        </form>
+      </section>
+
+      <div style="height: 1000px;">
+        <p>
+          Home I'm baby ramps knausgaard meh health goth williamsburg, bicycle rights chicharrones forage locavore seitan small batch. Listicle trust fund fixie, fanny pack vice lumbersexual cliche viral sustainable. Tattooed asymmetrical yr, heirloom roof party fixie next level actually blog hexagon kogi shaman bicycle rights copper mug. Vaporware seitan distillery tattooed, kinfolk listicle slow-carb four dollar toast. Gastropub 90's raclette, paleo shoreditch austin subway tile deep v vexillologist stumptown biodiesel pop-up readymade. Mlkshk cred chia, af unicorn gochujang semiotics pop-up VHS tattooed green juice listicle fashion axe. La croix hot chicken selvage, enamel pin direct trade cold-pressed jianbing tofu beard salvia. Trust fund dreamcatcher succulents glossier, truffaut meh cred meggings taiyaki chartreuse chillwave. Roof party kitsch yr man braid kogi, disrupt four dollar toast. Pinterest pour-over church-key tumeric tacos. Street art subway tile chia aesthetic roof party snackwave hell of drinking vinegar plaid echo park chillwave viral. Everyday carry neutra ugh, cornhole woke narwhal trust fund. Aesthetic man bun vice tumblr blog meggings jean shorts godard pitchfork health goth offal disrupt banjo kombucha. Chartreuse mixtape lyft, cray drinking vinegar mustache gluten-free etsy. Fashion axe literally cold-pressed normcore VHS affogato synth live-edge cray adaptogen copper mug. Shaman deep v meh blue bottle +1. Hella intelligentsia four loko adaptogen twee. Art party narwhal four loko lumbersexual, vexillologist everyday carry biodiesel stumptown drinking vinegar hashtag. Vexillologist pug helvetica, chia DIY copper mug hella chillwave coloring book. Hot chicken jean shorts shabby chic tousled, adaptogen vegan vape four loko etsy pok pok YOLO tbh small batch. Whatever hell of kombucha, pinterest hashtag forage hot chicken vice prism chicharrones pok pok 8-bit tilde keytar. La croix subway tile yr tumblr meh, air plant vexillologist fam gentrify microdosing. Street art pitchfork freegan bespoke put a bird on it, skateboard plaid thundercats cray cloud bread mustache actually pok pok. Pour-over kombucha chambray, offal jean shorts put a bird on it literally air plant intelligentsia keffiyeh tofu cliche sartorial gluten-free. Venmo lomo cornhole messenger bag pour-over vice migas four loko slow-carb, normcore freegan. Meditation hell of cliche green juice pitchfork etsy dreamcatcher lumbersexual man bun four dollar toast authentic before they sold out portland. Godard selfies fingerstache cray taiyaki cardigan. YOLO vice church-key, organic microdosing hexagon occupy skateboard ethical tilde. Kale chips banjo etsy small batch cliche, tacos organic hella try-hard mustache blog single-origin coffee mlkshk polaroid woke. Chartreuse street art squid disrupt, twee kombucha tofu mumblecore. Kale chips kogi helvetica, meggings hot chicken 3 wolf moon whatever brunch cred. Schlitz bitters food truck iPhone, four loko single-origin coffee 8-bit 3 wolf moon slow-carb tote bag literally. Keytar kitsch lo-fi, succulents deep v heirloom man bun cardigan bespoke hoodie stumptown. Oh. You need a little dummy text for your mockup? How quaint. I bet you’re still using Bootstrap too…
+        </p>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,0 +1,26 @@
+header {
+  height: 400px;
+  text-align: center;
+  padding-top: 1em;
+  background-image: url("../images/topography.svg");
+  background-color: antiquewhite;
+}
+
+.profile-pic {
+  width: 100vw;
+  display: flex;
+}
+
+.profile-pic img {
+  margin: auto;
+}
+
+.profile-pic h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 0px 0px 20px #000;
+  color: white;
+}
