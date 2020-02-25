@@ -1,0 +1,31 @@
+nav {
+  height: 120px;
+  /* background: #4056a1; */
+  padding: 1.5em;
+  color: #fff;
+  z-index: 999;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  position: sticky;
+  top: 0em;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a8b0dc+0,8591d3+100 */
+  background: #a8b0dc; /* Old browsers */
+  background: -moz-linear-gradient(top, #a8b0dc 0%, #8591d3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a8b0dc 0%, #8591d3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a8b0dc 0%, #8591d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8b0dc', endColorstr='#8591d3',GradientType=0 ); /* IE6-9 */
+}
+
+.logo {
+  font-family: "Bungee";
+}
+
+.justify-end {
+  justify-self: end;
+}
+
+.bold {
+  font-weight: bold;
+}
