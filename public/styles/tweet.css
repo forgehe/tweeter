@@ -1,0 +1,57 @@
+.tweet {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  border: 5px black solid;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 2em 0;
+  transition: 300ms;
+}
+.tweet header {
+  display: grid;
+  grid-template-columns: auto 5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.tweet header .avatar-sm {
+  justify-self: end;
+}
+.tweet header .avatar-name {
+  justify-self: start;
+}
+.tweet header .avatar-handle {
+  justify-self: end;
+}
+.tweet .body {
+  align-self: end;
+  border-bottom: solid;
+  border-width: 5px;
+  margin: 0 0.2em;
+}
+.tweet .body p {
+  margin-bottom: 0.5em;
+}
+.tweet footer {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.tweet footer .tweet-timeposted {
+  justify-self: end;
+}
+.tweet footer .tweet-social {
+  justify-self: end;
+}
+
+.tweet:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}

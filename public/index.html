@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- Font CSS -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,600,600i&display=swap" rel="stylesheet" />
@@ -32,7 +33,7 @@
       </div>
       <div class="justify-end"><span class="bold">Write</span> a new Tweet</div>
     </nav>
-    <header>
+    <header class="header-main">
       <div class="profile-pic">
         <img src="/images/profile-hex.png" />
       </div>
@@ -51,6 +52,43 @@
           <input class="new-tweet-form-grid" type="submit" value="Tweet" />
           <span id="new-tweet-counter" class="new-tweet-form-grid counter">140</span>
         </form>
+      </section>
+
+      <!-- Individual tweets -->
+      <article class="tweet">
+        <header class="header">
+          <div class="avatar-sm">
+            <img src="https://i.imgur.com/nlhLi3I.png" />
+          </div>
+          <div class="avatar-name">Descartes</div>
+          <div class="avatar-handle">@rd</div>
+        </header>
+        <div class="body">
+          <p class="tweet-text">
+            If I have seen further it is by standing on the shoulders of giants
+          </p>
+        </div>
+        <footer class="footer">
+          <div class="tweet-timeposted">1461116232227</div>
+          <div class="tweet-social"><p>Image</p></div>
+        </footer>
+      </article>
+
+      <section class="tweet">
+        <div class="header">
+          <div class="avatar-sm">
+            <img src="" />
+          </div>
+          <div class="avatar-name"></div>
+          <div class="avatar-handle"></div>
+        </div>
+        <div class="body">
+          <p class="tweet-text"></p>
+        </div>
+        <div class="footer">
+          <div class="tweet-timeposted"></div>
+          <div class="tweet-social"></div>
+        </div>
       </section>
 
       <div style="height: 1000px;">
