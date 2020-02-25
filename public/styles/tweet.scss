@@ -1,7 +1,6 @@
 .tweet {
 
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr auto 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -14,27 +13,11 @@
 
   transition: 300ms;
 
-
-
-
   header {
     display: grid;
     grid-template-columns: auto 5fr 1fr;
-    grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-
-    .avatar-sm {
-      justify-self: end;
-    }
-
-    .avatar-name {
-      justify-self: start;
-    }
-
-    .avatar-handle {
-      justify-self: end;
-    }
   }
 
 
@@ -51,18 +34,10 @@
 
   footer {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-
-    .tweet-timeposted {
-      justify-self: end;
-    }
-
-    .tweet-social {
-      justify-self: end;
-    }
+    align-items: center;
   }
 }
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
     <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/general.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -29,9 +30,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <div>
-        <span class="logo">tweeter</span>
+        <h1 class="logo">tweeter</h1>
       </div>
-      <div class="justify-end"><span class="bold">Write</span> a new Tweet</div>
+      <div class="justify-end align-center"><span class="bold">Write</span> a new Tweet</div>
     </nav>
     <header class="header-main">
       <div class="profile-pic">
@@ -53,43 +54,9 @@
           <span id="new-tweet-counter" class="new-tweet-form-grid counter">140</span>
         </form>
       </section>
-
-      <!-- Individual tweets -->
-      <article class="tweet">
-        <header class="header">
-          <div class="avatar-sm">
-            <img src="https://i.imgur.com/nlhLi3I.png" />
-          </div>
-          <div class="avatar-name">Descartes</div>
-          <div class="avatar-handle">@rd</div>
-        </header>
-        <div class="body">
-          <p class="tweet-text">
-            If I have seen further it is by standing on the shoulders of giants
-          </p>
-        </div>
-        <footer class="footer">
-          <div class="tweet-timeposted">1461116232227</div>
-          <div class="tweet-social"><p>Image</p></div>
-        </footer>
-      </article>
-
-      <section class="tweet">
-        <div class="header">
-          <div class="avatar-sm">
-            <img src="" />
-          </div>
-          <div class="avatar-name"></div>
-          <div class="avatar-handle"></div>
-        </div>
-        <div class="body">
-          <p class="tweet-text"></p>
-        </div>
-        <div class="footer">
-          <div class="tweet-timeposted"></div>
-          <div class="tweet-social"></div>
-        </div>
-      </section>
+      <div id="tweets-container">
+        <!-- Individual tweets -->
+      </div>
 
       <div style="height: 1000px;">
         <p>
