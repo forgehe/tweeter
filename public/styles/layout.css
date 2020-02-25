@@ -29,6 +29,10 @@ body {
  */
 main {
   width: 90vw;
-  display: flex;
+  /* display: flex; */
   margin: auto;
+}
+
+.invalidText {
+  color: red;
 }

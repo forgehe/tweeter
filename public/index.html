@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- Font CSS -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,600,600i&display=swap" rel="stylesheet" />
@@ -20,17 +21,16 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <div>
-        <span>tweeter</span>
+        <span class="logo">tweeter</span>
       </div>
-      <div class="justify-end">
-        Write a new Tweet
-      </div>
+      <div class="justify-end"><span class="bold">Write</span> a new Tweet</div>
     </nav>
     <header>
       <div class="profile-pic">
@@ -38,7 +38,7 @@
       </div>
       <br />
       <div>
-        <h2>Your Name</h2>
+        <h2><span class="bold">Your</span> Name</h2>
       </div>
     </header>
 
@@ -46,10 +46,10 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="tweets" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet" />
-          <span class="counter">140</span>
+        <form class="new-tweet-form-grid" action="tweets" method="POST">
+          <textarea id="new-tweet-textarea" class="new-tweet-form-grid" name="text" placeholder="What are you humming about?"></textarea>
+          <input class="new-tweet-form-grid" type="submit" value="Tweet" />
+          <span id="new-tweet-counter" class="new-tweet-form-grid counter">140</span>
         </form>
       </section>
 
