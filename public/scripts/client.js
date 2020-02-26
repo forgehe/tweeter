@@ -62,7 +62,7 @@ $(() => {
     // takes return value and appends it to the tweets container
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $("#tweets-container").append($tweet);
+      $("#tweets-container").prepend($tweet);
     }
   };
 
@@ -107,5 +107,11 @@ $(() => {
     return tweetHTML;
   };
 
-  renderTweets(data);
+  const loadTweets = function() {
+    $.ajax("tweets", { method: "GET" }).then(function(tweetsJSON) {
+      console.log("Success: ", tweetsJSON);
+      renderTweets(tweetsJSON);
+    });
+  };
+  loadTweets();
 });

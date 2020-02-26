@@ -6,13 +6,6 @@ $(document).ready(function() {
   const newTweetTextArea = $("#new-tweet-textarea");
   const newTweetCounter = newTweetTextArea.next().children("span");
   newTweetTextArea.on("keydown keyup", function() {
-    console.log(
-      "keydown",
-      $(this),
-      $(this)
-        .next()
-        .children("span")
-    ); //The this keyword is a reference to the button
     newTweetCounter.text(140 - $(this).val().length);
     if (newTweetCounter.text() < 0) {
       newTweetCounter.addClass("invalidText");
