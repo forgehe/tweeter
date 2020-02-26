@@ -1,13 +1,23 @@
-.new-tweet-form-grid {
+.new-tweet-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
-
-.new-tweet-form-grid textarea {
-  grid-area: 1 / 1 / 2 / 3;
+.new-tweet-form div {
+  display: flex;
+  justify-content: space-between;
+}
+.new-tweet-form div input[type="submit"] {
+  height: 2em;
+  width: max-content;
+  background-color: #7d88c4;
+  border-radius: 1em;
+  min-width: 5em;
+  font-family: "Bungee";
+  color: aliceblue;
+}
+.new-tweet-form textarea {
   max-width: 90vw;
   min-width: 90vw;
   resize: none;
@@ -16,13 +26,4 @@
   border-bottom: medium solid;
   margin: 0.5em 0px;
   display: inline-block;
-}
-.new-tweet-form-grid input {
-  grid-area: 2 / 1 / 3 / 2;
-  height: 2em;
-  width: max-content;
-}
-.new-tweet-form-grid span {
-  grid-area: 2 / 2 / 3 / 3;
-  justify-self: end;
 }

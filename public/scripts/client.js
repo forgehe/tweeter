@@ -6,7 +6,7 @@
 $(() => {
   // https://stackoverflow.com/a/3177838/6024104
   const timeSince = date => {
-    const seconds = Math.floor((new Date() - date) / 1000);
+    let seconds = Math.floor((new Date() - date) / 1000);
     let interval = Math.floor(seconds / 31536000);
 
     if (interval > 1) {
@@ -87,13 +87,19 @@ $(() => {
       </div>
       <footer class="footer">
         <div class="tweet-timeposted">
-          <p>${timeSince(tweetData.created_at)} ago</p>
+          <p>${moment(tweetData.created_at).fromNow()}</p>
         </div>
         <div class="tweet-social justify-end">
-          <a class="tweet-share" href="share">share</a>
-          <a class="tweet-repost" href="repost">repost</a>
-          <a class="tweet-like" href="like">like</a>
-        </div>
+          <a class="tweet-share" href="share">
+            <i class="material-icons">share</i>
+          </a>
+          <a class="tweet-repost" href="repost">
+            <i class="material-icons">repeat</i>
+          </a>
+          <a class="tweet-like" href="like">
+            <i class="material-icons">favorite</i>
+          </a>
+          </div>
       </footer>
     </article>
     `;

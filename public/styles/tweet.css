@@ -32,6 +32,10 @@
   grid-row-gap: 0px;
   align-items: center;
 }
+.tweet footer a {
+  color: black;
+  text-decoration: none;
+}
 
 .tweet:hover {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);

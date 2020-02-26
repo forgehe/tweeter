@@ -4,14 +4,14 @@ $(document).ready(function() {
   //   console.log("change", this); //The this keyword is a reference to the button
   // });
   const newTweetTextArea = $("#new-tweet-textarea");
-  const newTweetCounter = newTweetTextArea.next().next();
-  newTweetTextArea.on("keydown blur", function() {
+  const newTweetCounter = newTweetTextArea.next().children("span");
+  newTweetTextArea.on("keydown keyup", function() {
     console.log(
       "keydown",
       $(this),
       $(this)
         .next()
-        .next()
+        .children("span")
     ); //The this keyword is a reference to the button
     newTweetCounter.text(140 - $(this).val().length);
     if (newTweetCounter.text() < 0) {
