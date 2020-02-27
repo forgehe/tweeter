@@ -1,20 +1,19 @@
 .header-main {
-  height: 400px;
+  height: 20em;
   text-align: center;
-  padding-top: 1em;
   background-image: url("../images/topography.svg");
   background-color: antiquewhite;
 }
 
 .profile {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto;
+  height: 100%;
 }
 .profile img {
   margin: auto;
 }
 .profile h2 {
-  text-shadow: 0px 0px 20px #000;
+  text-shadow: 0 0 1em #000;
   color: white;
 }

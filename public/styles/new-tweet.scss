@@ -1,8 +1,6 @@
 .new-tweet-form {
   display: grid;
   grid-template-rows: auto auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 
   div {
     display: flex;
@@ -21,14 +19,12 @@
   }
 
   textarea {
-    max-width: 90vw;
-    min-width: 90vw;
     min-height: 15vh;
     resize: none;
     background-color: inherit;
     border: none;
     border-bottom: medium solid;
-    margin: 0.5em 0px;
+    margin: 0.5em 0;
     display: inline-block;
   }
 

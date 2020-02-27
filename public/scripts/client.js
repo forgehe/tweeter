@@ -95,9 +95,6 @@ $(() => {
     } else {
       $.post("tweets", $this.serialize()).then(function() {
         submitTweetError($tweetStatus, "Tweet Sent!", 5000);
-        // $tweetStatus.text("Tweet Sent!");
-        // $tweetStatus.fadeIn();
-        // $tweetStatus.fadeOut(5000);
         $this.children("textarea").val("");
         $this
           .children("div")
@@ -129,4 +126,9 @@ $(() => {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");
   });
+
+  $("#load_limit")
+    .slideUp(500)
+    .delay(5000)
+    .slideDown(500);
 });

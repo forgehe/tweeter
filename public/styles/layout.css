@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -14,25 +15,71 @@ html {
   font-family: "Source Sans Pro";
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  display: grid;
+  grid-template-areas: "nav" "header" "main" "footer";
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-main {
-  width: 90vw;
-  /* display: flex; */
+body > nav {
+  grid-area: nav;
+  background: transparent;
+  position: absolute;
+}
+body > nav * {
+  text-shadow: 0 0 1em #000;
+  font-weight: bolder;
+}
+body > header {
+  grid-area: header;
+  min-width: min-content;
+  padding-top: 5em;
+  box-sizing: content-box;
+}
+body > main {
+  grid-area: main;
+  width: 95%;
   margin: auto;
+  min-width: min-content;
 }
 
-.invalidText {
-  color: red;
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 12pt;
+    grid-template-areas: "nav" "header" "main" "footer";
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 1024px) {
+  body {
+    font-size: 14pt;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 16pt;
+    grid-template-areas: "nav nav" "header main";
+  }
+  body > nav {
+    position: sticky;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a8b0dc+0,8591d3+100 */
+    background: #a8b0dc;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a8b0dc 0%, #8591d3 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a8b0dc 0%, #8591d3 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a8b0dc 0%, #8591d3 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8b0dc', endColorstr='#8591d3', GradientType=0);
+    /* IE6-9 */
+  }
+  body > nav * {
+    text-shadow: none;
+    font-weight: initial;
+  }
+  body > header {
+    padding-top: 0;
+    box-sizing: border-box;
+    margin: 3rem;
+  }
 }

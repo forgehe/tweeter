@@ -1,5 +1,5 @@
 nav {
-  height: 120px;
+  height: 4em;
   /* background: #4056a1; */
   padding: 1.5em;
   color: #fff;
@@ -8,19 +8,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
-  position: sticky;
   top: 0em;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a8b0dc+0,8591d3+100 */
-  background: #a8b0dc;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #a8b0dc 0%, #8591d3 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #a8b0dc 0%, #8591d3 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #a8b0dc 0%, #8591d3 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8b0dc', endColorstr='#8591d3', GradientType=0);
-  /* IE6-9 */
 }
 
 .logo {
@@ -34,13 +22,17 @@ nav {
   position: fixed;
   color: white;
   display: none;
-  width: auto;
-  height: 50px;
+  width: 5em;
+  height: 3em;
   right: 2em;
-  top: 90vh;
+  bottom: 5vh;
   background-color: #7d88c4;
   font-weight: bold;
   border-radius: 2em;
+
+  &:hover {
+    mix-blend-mode: multiply;
+  }
 }
 
 

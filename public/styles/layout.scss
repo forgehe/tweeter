@@ -1,41 +1,123 @@
+$media-phone: "screen and (max-width: 420px)";
+$media-tablet: "screen and (min-width: 420px) and (max-width: 1024px)";
+$media-desktop: "screen and (min-width: 1024px)";
+
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-/*
- * Global layout stuff
- */
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 html {
   box-sizing: border-box;
 }
-* {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   font-family: sans-serif;
   font-family: "Source Sans Pro";
-  &:before {
-    box-sizing: inherit;
-    font-family: sans-serif;
-    font-family: "Source Sans Pro";
-  }
-  &:after {
-    box-sizing: inherit;
-    font-family: sans-serif;
-    font-family: "Source Sans Pro";
-  }
 }
+
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+
+  >nav {
+    grid-area: nav;
+    background: transparent;
+    position: absolute;
+
+    * {
+      text-shadow: 0 0 1em #000;
+      font-weight: bolder;
+    }
+  }
+
+  >header {
+    grid-area: header;
+    min-width: min-content;
+    padding-top: 5em;
+    box-sizing: content-box;
+  }
+
+  >main {
+    grid-area: main;
+    width: 95%;
+    margin: auto;
+    min-width: min-content;
+
+  }
 }
-main {
-  width: 90vw;
-  margin: auto;
+
+
+
+@media #{$media-phone} {
+  body {
+    font-size: 12pt;
+
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "footer";
+
+  }
 }
-.invalidText {
-  color: red;
+
+@media #{$media-tablet} {
+  body {
+    font-size: 14pt;
+
+
+
+    ;
+  }
+}
+
+@media #{$media-desktop} {
+  body {
+    font-size: 16pt;
+
+    grid-template-areas:
+      "nav nav"
+      "header main";
+
+
+
+    >nav {
+      position: sticky;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a8b0dc+0,8591d3+100 */
+      background: #a8b0dc;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #a8b0dc 0%, #8591d3 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #a8b0dc 0%, #8591d3 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #a8b0dc 0%, #8591d3 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8b0dc', endColorstr='#8591d3', GradientType=0);
+      /* IE6-9 */
+
+      * {
+        text-shadow: none;
+        font-weight: initial;
+      }
+
+    }
+
+    >header {
+      padding-top: 0;
+      box-sizing: border-box;
+      margin: 3rem;
+
+    }
+  }
 }
