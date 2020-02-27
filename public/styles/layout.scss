@@ -32,8 +32,8 @@ body {
 
   >nav {
     grid-area: nav;
-    background: transparent;
     position: absolute;
+    background: transparent;
 
     * {
       text-shadow: 0 0 1em #000;
@@ -62,23 +62,12 @@ body {
 @media #{$media-phone} {
   body {
     font-size: 12pt;
-
-    grid-template-areas:
-      "nav"
-      "header"
-      "main"
-      "footer";
-
   }
 }
 
 @media #{$media-tablet} {
   body {
     font-size: 14pt;
-
-
-
-    ;
   }
 }
 
@@ -94,6 +83,7 @@ body {
 
     >nav {
       position: sticky;
+      top: 0em;
       /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a8b0dc+0,8591d3+100 */
       background: #a8b0dc;
       /* Old browsers */

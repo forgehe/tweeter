@@ -1,37 +1,39 @@
 nav {
-  height: 4em;
-  /* background: #4056a1; */
-  padding: 1.5em;
-  color: #fff;
   z-index: 999;
-  width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   align-content: center;
-  top: 0em;
+  width: 100vw;
+  height: 4em;
+  padding: 1.5em;
+  color: white;
+
+  h1 {
+    font-family: "Bungee";
+
+  }
 }
 
-.logo {
-  font-family: "Bungee";
-
-}
 
 
 
 .btn-scroll-top {
-  position: fixed;
-  color: white;
   display: none;
+  z-index: 999;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
   width: 5em;
   height: 3em;
-  right: 2em;
-  bottom: 5vh;
+  color: white;
   background-color: #7d88c4;
+  font-family: "Bungee";
   font-weight: bold;
   border-radius: 2em;
+  border: white thin solid;
 
   &:hover {
-    mix-blend-mode: multiply;
+    background-color: #757dac;
   }
 }
 

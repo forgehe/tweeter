@@ -8,24 +8,29 @@
 
     input[type="submit"] {
       height: 2em;
+      width: 5em;
       width: max-content;
-      background-color: #7d88c4;
-      border-radius: 1em;
-      min-width: 5em;
-      font-family: "Bungee";
       color: aliceblue;
+      background-color: #7d88c4;
+      border: none;
+      border-radius: 1em;
+      font-family: "Bungee";
+
+      &:hover {
+        background-color: #757dac;
+      }
     }
 
   }
 
   textarea {
-    min-height: 15vh;
-    resize: none;
+    display: inline-block;
     background-color: inherit;
+    min-height: 5em;
+    resize: none;
     border: none;
     border-bottom: medium solid;
     margin: 0.5em 0;
-    display: inline-block;
   }
 
   p {
