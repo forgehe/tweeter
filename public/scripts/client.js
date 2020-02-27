@@ -18,28 +18,38 @@ $(() => {
     }
   };
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = tweetData => {
+    const avatarImgSource = escape(tweetData.user.avatars);
+    const avatarName = escape(tweetData.user.name);
+    const avatarHandle = escape(tweetData.user.handle);
+    const tweetText = escape(tweetData.content.text);
+    const tweetTime = moment(escape(tweetData.created_at)).fromNow();
+
     const tweetHTML = `
     <article class="tweet">
       <header class="header">
         <div class="avatar-sm justify-end">
-          <img src="${tweetData.user.avatars}" />
+          <img src="${avatarImgSource}" />
         </div>
         <div class="avatar-name">
-          <h4>${tweetData.user.name}</h4>
+          <h4>${avatarName}</h4>
         </div>
         <div class="avatar-handle justify-end">
-          <p>${tweetData.user.handle}</p>
+          <p>${avatarHandle}</p>
         </div>
       </header>
       <div class="body">
-        <p class="tweet-text">
-          ${tweetData.content.text}
-        </p>
+        <p class="tweet-text">${tweetText}</p>
       </div>
       <footer class="footer">
         <div class="tweet-timeposted">
-          <p>${moment(tweetData.created_at).fromNow()}</p>
+          <p>${tweetTime}</p>
         </div>
         <div class="tweet-social justify-end">
           <a class="tweet-share" href="share">
