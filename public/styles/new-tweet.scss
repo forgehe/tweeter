@@ -18,14 +18,12 @@
       color: aliceblue;
     }
 
-    span {
-      // justify-self: end;
-    }
   }
 
   textarea {
     max-width: 90vw;
     min-width: 90vw;
+    min-height: 15vh;
     resize: none;
     background-color: inherit;
     border: none;
@@ -34,5 +32,14 @@
     display: inline-block;
   }
 
+  p {
+    margin: 0;
+    display: none;
+  }
+
+}
+
+.new-tweet {
+  display: none;
 
 }

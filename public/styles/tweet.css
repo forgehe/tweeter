@@ -24,6 +24,8 @@
 }
 .tweet .body p {
   margin-bottom: 0.5em;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .tweet footer {
   display: grid;

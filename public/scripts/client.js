@@ -13,23 +13,23 @@ $(() => {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    for (const tweet of tweets) {
+    tweets.forEach(tweet => {
       prependTweet(tweet);
-    }
+    });
   };
 
   const escape = function(str) {
-    let div = document.createElement("div");
+    const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
   const createTweetElement = tweetData => {
-    const avatarImgSource = escape(tweetData.user.avatars);
-    const avatarName = escape(tweetData.user.name);
-    const avatarHandle = escape(tweetData.user.handle);
+    const avatarImgSource = tweetData.user.avatars;
+    const avatarName = tweetData.user.name;
+    const avatarHandle = tweetData.user.handle;
     const tweetText = escape(tweetData.content.text);
-    const tweetTime = moment(escape(tweetData.created_at)).fromNow();
+    const tweetTime = moment(tweetData.created_at).fromNow();
 
     const tweetHTML = `
     <article class="tweet">
@@ -71,7 +71,6 @@ $(() => {
 
   const loadTweets = function() {
     $.ajax("tweets", { method: "GET" }).then(function(tweetsJSON) {
-      console.log("Success: ", tweetsJSON);
       renderTweets(tweetsJSON);
     });
   };
@@ -80,8 +79,10 @@ $(() => {
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
     const $this = $(this);
-    const $tweetStatus = $this.next();
-    if ($this.children("textarea").val().length < 0) {
+    // console.log($this, $this.text());
+
+    const $tweetStatus = $this.children("div").children(".tweet-status");
+    if ($this.children("textarea").val().length <= 0) {
       $tweetStatus.text("Nothing In Tweet!");
       $tweetStatus.fadeIn();
       $tweetStatus.fadeOut(1000);
@@ -93,12 +94,36 @@ $(() => {
       $.post("tweets", $this.serialize()).then(function() {
         $tweetStatus.text("Tweet Sent!");
         $tweetStatus.fadeIn();
-        $tweetStatus.fadeOut(10000);
+        $tweetStatus.fadeOut(5000);
         $this.children("textarea").val("");
+        $this
+          .children("div")
+          .children(".counter")
+          .text("140");
         $.get("tweets").then(value => {
           prependTweet(value[value.length - 1]);
         });
       });
     }
+  });
+
+  $(".toggle-write-tweet").click(() => {
+    $(".new-tweet").slideToggle();
+    $(".new-tweet textarea").focus();
+  });
+
+  const scrollTopBtn = $("#btn-scroll-top");
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      scrollTopBtn.fadeIn(200);
+    } else {
+      scrollTopBtn.fadeOut(200);
+    }
+  });
+
+  scrollTopBtn.click(function(event) {
+    event.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
   });
 });

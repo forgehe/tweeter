@@ -20,10 +20,19 @@
 .new-tweet-form textarea {
   max-width: 90vw;
   min-width: 90vw;
+  min-height: 15vh;
   resize: none;
   background-color: inherit;
   border: none;
   border-bottom: medium solid;
   margin: 0.5em 0px;
   display: inline-block;
+}
+.new-tweet-form p {
+  margin: 0;
+  display: none;
+}
+
+.new-tweet {
+  display: none;
 }
