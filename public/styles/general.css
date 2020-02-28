@@ -20,4 +20,5 @@
 
 .invalidText {
   color: red;
+  border-color: red;
 }

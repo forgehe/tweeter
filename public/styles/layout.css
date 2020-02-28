@@ -13,6 +13,7 @@ html {
   box-sizing: inherit;
   font-family: sans-serif;
   font-family: "Source Sans Pro";
+  transition: 200ms;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 }
 body > nav {
   grid-area: nav;
-  position: absolute;
+  position: fixed;
   background: transparent;
 }
 body > nav * {
@@ -80,6 +81,6 @@ body > main {
   body > header {
     padding-top: 0;
     box-sizing: border-box;
-    margin: 3rem;
+    margin: 2em;
   }
 }

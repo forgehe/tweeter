@@ -29,8 +29,11 @@
   margin: 0.5em 0;
 }
 .new-tweet-form p {
-  margin: 0;
   display: none;
+  align-self: center;
+  border: 0.2em solid;
+  margin: 0;
+  padding: 0px 3em;
   font-weight: bold;
 }
 

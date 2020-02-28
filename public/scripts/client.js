@@ -76,12 +76,16 @@ $(() => {
   };
   loadTweets();
 
-  const submitTweetError = (jObj, errString, fadeNum) => {
-    jObj.addClass("invalidText");
-    jObj.text(errString);
-    jObj.fadeIn();
-    jObj.fadeOut(fadeNum);
-    jObj.removeClass("invalidText");
+  const submitTweetMsg = (jObj, msgString, duration, boolErr) => {
+    if (!jObj.is(":visible")) {
+      jObj
+        .text(msgString)
+        .addClass(boolErr ? "invalidText" : "")
+        .slideDown();
+      setTimeout(() => {
+        jObj.slideUp().removeClass(boolErr ? "invalidText" : "");
+      }, duration);
+    }
   };
 
   $("#new-tweet-form").submit(function(event) {
@@ -89,12 +93,14 @@ $(() => {
     const $this = $(this);
     const $tweetStatus = $this.children("div").children(".tweet-status");
     if ($this.children("textarea").val().length <= 0) {
-      submitTweetError($tweetStatus, "Nothing In Tweet Message!", 5000);
+      submitTweetMsg($tweetStatus, "Nothing In Tweet Message!", 3000, true);
     } else if ($this.children("textarea").val().length > 140) {
-      submitTweetError($tweetStatus, "Tweet Overload! Keep the message under 140!", 5000);
+      submitTweetMsg($tweetStatus, "Tweet Overload! Keep the message under 140!", 3000, true);
     } else {
+      console.log($this.serialize());
+
       $.post("tweets", $this.serialize()).then(function() {
-        submitTweetError($tweetStatus, "Tweet Sent!", 5000);
+        submitTweetMsg($tweetStatus, "Tweet Sent!", 3000);
         $this.children("textarea").val("");
         $this
           .children("div")
@@ -126,9 +132,4 @@ $(() => {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");
   });
-
-  $("#load_limit")
-    .slideUp(500)
-    .delay(5000)
-    .slideDown(500);
 });
