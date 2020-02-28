@@ -18,6 +18,7 @@ $(() => {
     });
   };
 
+  // used to escape dangerous characters before inserting it into HTML
   const escape = function(str) {
     const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -88,6 +89,8 @@ $(() => {
     }
   };
 
+  // Listens to submissions from new-tweet-form and posts the tweets to the server,
+  // giving a response in the html
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
     const $this = $(this);
@@ -113,13 +116,14 @@ $(() => {
     }
   });
 
+  // Toggle shows button to write a tweet
   $(".toggle-write-tweet").click(() => {
     $(".new-tweet").slideToggle();
     $(".new-tweet textarea").focus();
   });
 
+  // To Top Button
   const scrollTopBtn = $("#btn-scroll-top");
-
   $(window).scroll(function() {
     if ($(window).scrollTop() > 300) {
       scrollTopBtn.fadeIn(200);
@@ -127,7 +131,6 @@ $(() => {
       scrollTopBtn.fadeOut(200);
     }
   });
-
   scrollTopBtn.click(function(event) {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");
