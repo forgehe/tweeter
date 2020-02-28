@@ -2,7 +2,6 @@ $media-phone: "screen and (max-width: 420px)";
 $media-tablet: "screen and (min-width: 420px) and (max-width: 1024px)";
 $media-desktop: "screen and (min-width: 1024px)";
 
-
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -57,8 +56,6 @@ body {
 
   }
 }
-
-
 
 @media #{$media-phone} {
   body {

@@ -100,8 +100,6 @@ $(() => {
     } else if ($this.children("textarea").val().length > 140) {
       submitTweetMsg($tweetStatus, "Tweet Overload! Keep the message under 140!", 3000, true);
     } else {
-      console.log($this.serialize());
-
       $.post("tweets", $this.serialize()).then(function() {
         submitTweetMsg($tweetStatus, "Tweet Sent!", 3000);
         $this.children("textarea").val("");
